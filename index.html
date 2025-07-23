@@ -17,29 +17,19 @@
         }
 
         :root {
-            --primary-bg: #0A1128;
-            --secondary-bg: #001F54;
-            --text-primary: #E0FBFC;
-            --text-secondary: #BFDBF7;
-            --accent-color: #034078;
-            --accent-hover: #1282A2;
-            --card-bg: #001F54;
-            --border-color: #1282A2;
-            --gradient-start: #0A1128;
-            --gradient-end: #001F54;
+            --primary-bg: #ffffff;
+            --secondary-bg: #f3f4f6;
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --accent-color: #3b82f6;
         }
 
         [data-theme="dark"] {
-            --primary-bg: #0A1128;
-            --secondary-bg: #001F54;
-            --text-primary: #E0FBFC;
-            --text-secondary: #BFDBF7;
-            --accent-color: #034078;
-            --accent-hover: #1282A2;
-            --card-bg: #001F54;
-            --border-color: #1282A2;
-            --gradient-start: #034078;
-            --gradient-end: #1282A2;
+            --primary-bg: #0f172a;
+            --secondary-bg: #1e293b;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent-color: #60a5fa;
         }
 
         body {
@@ -53,19 +43,23 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--accent-color);
-            box-shadow: 0 0 20px rgba(3, 64, 120, 0.2);
-            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .profile-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(3, 64, 120, 0.3);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
         }
 
         .glass-nav {
-            background: var(--secondary-bg);
-            border-bottom: 1px solid var(--border-color);
-            backdrop-filter: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
         }
 
         .card-hover {
@@ -81,7 +75,8 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, var(--accent-color), var(--accent-hover));
+            background: var(--accent-color);
+            color: white;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -104,7 +99,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(var(--accent-color), 0.3);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
         }
 
         .gradient-bg {
@@ -177,11 +172,12 @@
             transition: all 0.3s ease;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(3, 64, 120, 0.1);
-            outline: none;
+        .floating-shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            left: 80%;
+            animation-delay: 2s;
         }
 
         .social-icon {
@@ -313,25 +309,6 @@
         .tech-icon:nth-child(3) { animation-delay: 1s; }
         .tech-icon:nth-child(4) { animation-delay: 1.5s; }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-            }
-        }
-
-        .glow-effect {
-            box-shadow: 0 0 30px rgba(var(--accent-color), 0.4);
-            animation: pulse-glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes pulse-glow {
-            from { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); }
-            to { box-shadow: 0 0 40px rgba(102, 126, 234, 0.6); }
-        }
-
         .contact-form {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
@@ -365,15 +342,27 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
+
+        .navbar-brand {
+            color: #fff !important;
+            text-shadow: 0 2px 16px rgba(59,130,246,0.5), 0 1px 0 #000;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 
-<body class="bg-primary-bg scroll-smooth">
+<body class="bg-gray-900 scroll-smooth">
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full glass-nav z-50">
         <div class="max-w-6xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold neon-text text-text-primary">
+                <div class="text-2xl font-bold gradient-bg bg-clip-text text-transparent neon-text">
                     Purv Patel
                 </div>
                 <div class="hidden md:flex space-x-8">
@@ -418,12 +407,12 @@
                 </div>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-                    Hi, I'm <span class="text-accent-color">Purv</span>
-                </h1>
+                Hi, I'm <span class="neon-text text-blue-400 animate-pulse">Purv</span>
+            </h1>
             <p class="text-xl md:text-2xl mb-8 typing-animation inline-block" id="typing-text">
                 MERN Stack Developer
             </p>
-            <p class="text-lg md:text-xl mb-12 text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg md:text-xl mb-12 text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 Computer Engineering student passionate about creating innovative web solutions with modern technologies
                 like React, Node.js, and MongoDB.
             </p>
@@ -432,7 +421,7 @@
                     <i class="fas fa-eye mr-2"></i>View My Work
                 </a>
                 <a href="https://drive.google.com/file/d/10jsRuy5bstRsmQ7RN9Qw-kiwagbX8Hr0/view?usp=drive_link"
-                    class="bg-secondary-bg text-text-primary px-8 py-4 rounded-full font-semibold hover:bg-accent-hover transition-all hover:scale-105 shadow-lg transform"
+                    class="bg-yellow-400 text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-all hover:scale-105 shadow-lg transform"
                     target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-download mr-2"></i>Download Resume
                 </a>
