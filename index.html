@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purv Patel - Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
@@ -16,29 +17,29 @@
         }
 
         :root {
-            --primary-bg: #ffffff;
-            --secondary-bg: #f8fafc;
-            --text-primary: #1e293b;
-            --text-secondary: #475569;
-            --accent-color: #2563eb;
-            --accent-hover: #1d4ed8;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --gradient-start: #2563eb;
-            --gradient-end: #4f46e5;
+            --primary-bg: #0A1128;
+            --secondary-bg: #001F54;
+            --text-primary: #E0FBFC;
+            --text-secondary: #BFDBF7;
+            --accent-color: #034078;
+            --accent-hover: #1282A2;
+            --card-bg: #001F54;
+            --border-color: #1282A2;
+            --gradient-start: #0A1128;
+            --gradient-end: #001F54;
         }
 
         [data-theme="dark"] {
-            --primary-bg: #0f172a;
-            --secondary-bg: #1e293b;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --accent-color: #3b82f6;
-            --accent-hover: #60a5fa;
-            --card-bg: #1e293b;
-            --border-color: #334155;
-            --gradient-start: #3b82f6;
-            --gradient-end: #6366f1;
+            --primary-bg: #0A1128;
+            --secondary-bg: #001F54;
+            --text-primary: #E0FBFC;
+            --text-secondary: #BFDBF7;
+            --accent-color: #034078;
+            --accent-hover: #1282A2;
+            --card-bg: #001F54;
+            --border-color: #1282A2;
+            --gradient-start: #034078;
+            --gradient-end: #1282A2;
         }
 
         body {
@@ -52,18 +53,18 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--accent-color);
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 0 20px rgba(3, 64, 120, 0.2);
             transition: all 0.3s ease;
         }
 
         .profile-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 0 30px rgba(3, 64, 120, 0.3);
         }
 
         .glass-nav {
-            background: #0f172a;
-            border-bottom: 1px solid #1a1a2e;
+            background: var(--secondary-bg);
+            border-bottom: 1px solid var(--border-color);
             backdrop-filter: none;
         }
 
@@ -80,7 +81,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(45deg, var(--accent-color), var(--accent-hover));
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -103,11 +104,11 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 20px rgba(var(--accent-color), 0.3);
         }
 
         .gradient-bg {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
             position: relative;
         }
 
@@ -119,14 +120,14 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+                radial-gradient(circle at 20% 20%, rgba(3, 64, 120, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(18, 130, 162, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(63, 131, 248, 0.2) 0%, transparent 50%);
             animation: gradientShift 8s ease-in-out infinite;
         }
 
         .skill-tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -149,7 +150,7 @@
 
         .skill-tag:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(var(--accent-color), 0.4);
         }
 
         .project-card {
@@ -179,7 +180,7 @@
         .contact-form input:focus,
         .contact-form textarea:focus {
             border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            box-shadow: 0 0 0 3px rgba(3, 64, 120, 0.1);
             outline: none;
         }
 
@@ -215,7 +216,7 @@
         }
 
         .typing-animation {
-            border-right: 2px solid #60a5fa;
+            border-right: 2px solid var(--accent-hover);
             animation: blink 1s infinite;
         }
 
@@ -240,7 +241,7 @@
         }
 
         .dark-section {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
             position: relative;
         }
 
@@ -252,12 +253,12 @@
             right: 0;
             bottom: 0;
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 25% 25%, rgba(var(--accent-color), 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(var(--accent-hover), 0.1) 0%, transparent 50%);
         }
 
         .about-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -273,7 +274,7 @@
         }
 
         .skills-bg {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, var(--accent-color) 100%);
             position: relative;
         }
 
@@ -289,12 +290,12 @@
         }
 
         .projects-bg {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
             position: relative;
         }
 
         .neon-text {
-            text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+            text-shadow: 0 0 10px var(--accent-hover);
         }
 
         .glass-card {
@@ -322,7 +323,7 @@
         }
 
         .glow-effect {
-            box-shadow: 0 0 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 0 30px rgba(var(--accent-color), 0.4);
             animation: pulse-glow 2s ease-in-out infinite alternate;
         }
 
@@ -350,40 +351,40 @@
         }
 
         .contact-bg {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, var(--accent-color) 100%);
             position: relative;
         }
 
         .footer-bg {
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
         }
 
         .navbar-brand {
-            color: #fff !important;
-            text-shadow: 0 2px 16px rgba(59,130,246,0.5), 0 1px 0 #000;
+            color: var(--text-primary) !important;
+            text-shadow: 0 2px 16px rgba(var(--accent-color),0.5), 0 1px 0 #000;
             font-weight: 700;
             letter-spacing: 1px;
         }
     </style>
 </head>
 
-<body class="bg-gray-900 scroll-smooth">
+<body class="bg-primary-bg scroll-smooth">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full glass-nav z-50">
         <div class="max-w-6xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold neon-text text-white">
+                <div class="text-2xl font-bold neon-text text-text-primary">
                     Purv Patel
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
-                    <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
-                    <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-                    <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
+                    <a href="#home" class="text-text-secondary hover:text-accent-color transition-colors">Home</a>
+                    <a href="#about" class="text-text-secondary hover:text-accent-color transition-colors">About</a>
+                    <a href="#skills" class="text-text-secondary hover:text-accent-color transition-colors">Skills</a>
+                    <a href="#projects" class="text-text-secondary hover:text-accent-color transition-colors">Projects</a>
+                    <a href="#contact" class="text-text-secondary hover:text-accent-color transition-colors">Contact</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden">
-                    <i class="fas fa-bars text-2xl text-gray-300"></i>
+                    <i class="fas fa-bars text-2xl text-text-secondary"></i>
                 </button>
             </div>
         </div>
@@ -391,17 +392,17 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden glass-nav">
             <div class="px-6 py-4 space-y-4">
-                <a href="#home" class="block text-gray-300 hover:text-blue-400">Home</a>
-                <a href="#about" class="block text-gray-300 hover:text-blue-400">About</a>
-                <a href="#skills" class="block text-gray-300 hover:text-blue-400">Skills</a>
-                <a href="#projects" class="block text-gray-300 hover:text-blue-400">Projects</a>
-                <a href="#contact" class="block text-gray-300 hover:text-blue-400">Contact</a>
+                <a href="#home" class="block text-text-secondary hover:text-accent-color">Home</a>
+                <a href="#about" class="block text-text-secondary hover:text-accent-color">About</a>
+                <a href="#skills" class="block text-text-secondary hover:text-accent-color">Skills</a>
+                <a href="#projects" class="block text-text-secondary hover:text-accent-color">Projects</a>
+                <a href="#contact" class="block text-text-secondary hover:text-accent-color">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen gradient-bg flex items-center justify-center text-white relative overflow-hidden">
+    <section id="home" class="min-h-screen gradient-bg flex items-center justify-center text-text-primary relative overflow-hidden">
         <!-- Floating Shapes -->
         <div class="floating-shapes">
             <div class="floating-shape"></div>
@@ -413,16 +414,16 @@
             <div class="mb-8 mt-16">
                 <div class="relative inline-block">
                     <img src="profile.jpeg" alt="Purv Patel" class="profile-image mx-auto mb-6">
-                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-4 border-white animate-pulse"></div>
+                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-color rounded-full border-4 border-primary-bg animate-pulse"></div>
                 </div>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-                Hi, I'm <span class="text-white">Purv</span>
-            </h1>
+                    Hi, I'm <span class="text-accent-color">Purv</span>
+                </h1>
             <p class="text-xl md:text-2xl mb-8 typing-animation inline-block" id="typing-text">
                 MERN Stack Developer
             </p>
-            <p class="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg md:text-xl mb-12 text-text-secondary max-w-2xl mx-auto leading-relaxed">
                 Computer Engineering student passionate about creating innovative web solutions with modern technologies
                 like React, Node.js, and MongoDB.
             </p>
@@ -431,11 +432,11 @@
                     <i class="fas fa-eye mr-2"></i>View My Work
                 </a>
                 <a href="https://drive.google.com/file/d/10jsRuy5bstRsmQ7RN9Qw-kiwagbX8Hr0/view?usp=drive_link"
-                    class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg transform"
+                    class="bg-secondary-bg text-text-primary px-8 py-4 rounded-full font-semibold hover:bg-accent-hover transition-all hover:scale-105 shadow-lg transform"
                     target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-download mr-2"></i>Download Resume
                 </a>
-                <a href="#contact" class="border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all hover:scale-105 transform">
+                <a href="#contact" class="border-2 border-text-primary px-8 py-4 rounded-full font-semibold hover:bg-text-primary hover:text-accent-color transition-all hover:scale-105 transform">
                     <i class="fas fa-envelope mr-2"></i>Get In Touch
                 </a>
             </div>
@@ -443,16 +444,16 @@
 
         <!-- Floating Tech Icons -->
         <div class="absolute top-20 left-10 text-6xl opacity-30 tech-icon">
-            <i class="fab fa-js-square text-yellow-400"></i>
+            <i class="fab fa-js-square text-accent-color"></i>
         </div>
         <div class="absolute bottom-20 right-10 text-6xl opacity-30 tech-icon">
-            <i class="fab fa-react text-cyan-400"></i>
+            <i class="fab fa-react text-accent-color"></i>
         </div>
         <div class="absolute top-1/2 left-5 text-4xl opacity-30 tech-icon">
-            <i class="fab fa-node-js text-green-400"></i>
+            <i class="fab fa-node-js text-accent-color"></i>
         </div>
         <div class="absolute top-1/3 right-20 text-5xl opacity-30 tech-icon">
-            <i class="fab fa-java text-red-400"></i>
+            <i class="fab fa-java text-accent-color"></i>
         </div>
     </section>
 
@@ -461,20 +462,20 @@
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="section-fade">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 neon-text">
-                    About <span class="text-yellow-300">Me</span>
+                    About <span class="text-accent-color">Me</span>
                 </h2>
 
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-white">
+                        <h3 class="text-2xl font-semibold mb-6 text-text-primary">
                             Passionate Computer Engineer
                         </h3>
-                        <p class="text-gray-200 mb-6 leading-relaxed">
+                        <p class="text-text-secondary mb-6 leading-relaxed">
                             I'm currently pursuing Computer Engineering at L.D.R.P – ITR, Gandhinagar with a CGPA of
                             7.74. My journey in tech began with curiosity and has evolved into a passion for creating
                             meaningful digital experiences.
                         </p>
-                        <p class="text-gray-200 mb-6 leading-relaxed">
+                        <p class="text-text-secondary mb-6 leading-relaxed">
                             I specialize in full-stack web development using the MERN stack, with experience in building
                             scalable applications that solve real-world problems. From healthcare appointment systems to
                             blogging platforms, I enjoy tackling diverse challenges.
@@ -482,40 +483,40 @@
 
                         <div class="grid grid-cols-2 gap-4 mb-8">
                             <div class="text-center p-4 glass-card rounded-lg">
-                                <div class="text-2xl font-bold text-blue-400">3+</div>
+                                <div class="text-2xl font-bold text-accent-color">3+</div>
                                 <div class="text-gray-300">Projects</div>
                             </div>
                             <div class="text-center p-4 glass-card rounded-lg">
-                                <div class="text-2xl font-bold text-blue-400">2026</div>
-                                <div class="text-gray-300">Graduation</div>
+                                <div class="text-2xl font-bold text-accent-color">2026</div>
+                                <div class="text-text-secondary">Graduation</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="space-y-6">
                         <div class="glass-card p-6 rounded-xl">
-                            <h4 class="font-semibold text-white mb-4">Education</h4>
+                            <h4 class="font-semibold text-text-primary mb-4">Education</h4>
                             <div class="space-y-3">
                                 <div>
-                                    <div class="font-medium text-white">Computer Engineering</div>
-                                    <div class="text-sm text-gray-300">L.D.R.P – ITR, Gandhinagar</div>
-                                    <div class="text-sm text-blue-400">CGPA: 7.74 | 2022-2026</div>
+                                    <div class="font-medium text-text-primary">Computer Engineering</div>
+                                    <div class="text-sm text-text-secondary">L.D.R.P – ITR, Gandhinagar</div>
+                                    <div class="text-sm text-accent-color">CGPA: 7.74 | 2022-2026</div>
                                 </div>
                                 <div>
-                                    <div class="font-medium text-white">Higher Secondary (XII)</div>
-                                    <div class="text-sm text-gray-300">Shree Swaminarayan Higher Secondary School</div>
-                                    <div class="text-sm text-blue-400">64% | 2022</div>
+                                    <div class="font-medium text-text-primary">Higher Secondary (XII)</div>
+                                    <div class="text-sm text-text-secondary">Shree Swaminarayan Higher Secondary School</div>
+                                    <div class="text-sm text-accent-color">64% | 2022</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="glass-card p-6 rounded-xl">
-                            <h4 class="font-semibold text-white mb-4">Certifications</h4>
+                            <h4 class="font-semibold text-text-primary mb-4">Certifications</h4>
                             <div class="flex items-center space-x-3">
-                                <i class="fab fa-python text-2xl text-blue-400"></i>
+                                <i class="fab fa-python text-2xl text-accent-color"></i>
                                 <div>
-                                    <div class="font-medium text-white">Python For Data Science</div>
-                                    <div class="text-sm text-gray-300">NPTEL</div>
+                                    <div class="font-medium text-text-primary">Python For Data Science</div>
+                                    <div class="text-sm text-text-secondary">NPTEL</div>
                                 </div>
                             </div>
                         </div>
@@ -530,13 +531,13 @@
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="section-fade">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 neon-text">
-                    Technical <span class="text-blue-400">Skills</span>
+                    Technical <span class="text-accent-color">Skills</span>
                 </h2>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-3xl mb-4 text-center">
-                            <i class="fas fa-code text-blue-400"></i>
+                            <i class="fas fa-code text-accent-color"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4 text-center">Languages</h3>
                         <div class="space-y-2">
@@ -548,7 +549,7 @@
 
                     <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-3xl mb-4 text-center">
-                            <i class="fas fa-laptop-code text-green-400"></i>
+                            <i class="fas fa-laptop-code text-accent-color"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4 text-center">Frontend</h3>
                         <div class="space-y-2">
@@ -560,7 +561,7 @@
 
                     <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-3xl mb-4 text-center">
-                            <i class="fas fa-server text-purple-400"></i>
+                            <i class="fas fa-server text-accent-color"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4 text-center">Backend</h3>
                         <div class="space-y-2">
@@ -572,7 +573,7 @@
 
                     <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-3xl mb-4 text-center">
-                            <i class="fas fa-tools text-red-400"></i>
+                            <i class="fas fa-tools text-accent-color"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-4 text-center">Tools</h3>
                         <div class="space-y-2">
@@ -591,13 +592,13 @@
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="section-fade">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 neon-text">
-                    Featured <span class="text-purple-400">Projects</span>
+                    Featured <span class="text-accent-color">Projects</span>
                 </h2>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- BookMyDoc Project -->
                     <div class="project-card rounded-xl shadow-lg overflow-hidden card-hover border">
-                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-accent-color to-accent-hover flex items-center justify-center relative overflow-hidden">
                             <div class="absolute inset-0 bg-black/20"></div>
                             <i class="fas fa-user-md text-6xl text-white relative z-10"></i>
                             <div class="absolute top-2 right-2 bg-white/20 px-2 py-1 rounded text-xs">Healthcare</div>
@@ -605,25 +606,25 @@
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-3 flex items-center text-white">
                                 BookMyDoc
-                                <span class="ml-2 bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs">Featured</span>
+                                <span class="ml-2 bg-accent-color/20 text-accent-color px-2 py-1 rounded-full text-xs">Featured</span>
                             </h3>
-                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">
                                 A comprehensive doctor appointment system with ML-powered disease prediction.
                                 Streamlines medical consultations with real-time updates and intelligent symptom analysis.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">React</span>
-                                <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Node.js</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">MongoDB</span>
-                                <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">ML</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">React</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">Node.js</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">MongoDB</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">ML</span>
                             </div>
                             <div class="flex space-x-3">
-                                <a href="https://bookmydoc-five.vercel.app/" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center"
+                                <a href="https://bookmydoc-five.vercel.app/" class="text-accent-color hover:text-accent-hover transition-colors flex items-center"
                                     target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                                 </a>
                                 <a href="https://github.com/purvpatel123/DoctorAppointmentSystem?tab=readme-ov-file"
-                                    class="text-gray-400 hover:text-gray-300 transition-colors flex items-center">
+                                    class="text-text-secondary hover:text-text-primary transition-colors flex items-center">
                                     <i class="fab fa-github mr-1"></i> Code
                                 </a>
                             </div>
@@ -633,26 +634,26 @@
                     <!-- Blog App Project -->
                     <div class="project-card rounded-xl shadow-lg overflow-hidden card-hover border">
                         <div
-                            class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                            class="h-48 bg-gradient-to-br from-accent-color to-accent-hover flex items-center justify-center relative overflow-hidden">
                             <div class="absolute inset-0 bg-black/10"></div>
                             <i class="fas fa-blog text-6xl text-white relative z-10"></i>
                             <div class="absolute top-2 right-2 bg-white/20 px-2 py-1 rounded text-xs">Content</div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-3">Blog Platform</h3>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">
                                 Full-stack MERN blogging platform with admin dashboard for content management.
                                 Features user authentication, content creation, and contact functionality.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">React</span>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Node.js</span>
-                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">MongoDB</span>
-                                <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">Tailwind</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">React</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">Node.js</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">MongoDB</span>
+                                <span class="bg-accent-color/20 text-accent-color px-2 py-1 rounded text-xs">Tailwind</span>
                             </div>
                             <div class="flex space-x-3">
                                 <a href="https://github.com/purvpatel123/BlogApp"
-                                    class="text-gray-600 hover:text-gray-800 transition-colors flex items-center">
+                                    class="text-text-secondary hover:text-text-primary transition-colors flex items-center">
                                     <i class="fab fa-github mr-1"></i> View Code
                                 </a>
                             </div>
@@ -662,14 +663,14 @@
                     <!-- Pizza Website Project -->
                     <div class="project-card rounded-xl shadow-lg overflow-hidden card-hover border">
                         <div
-                            class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center relative overflow-hidden">
+                            class="h-48 bg-gradient-to-br from-accent-color to-accent-hover flex items-center justify-center relative overflow-hidden">
                             <div class="absolute inset-0 bg-black/10"></div>
                             <i class="fas fa-pizza-slice text-6xl text-white relative z-10"></i>
                             <div class="absolute top-2 right-2 bg-white/20 px-2 py-1 rounded text-xs">Restaurant</div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-3">Pizza Website</h3>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">
                                 Responsive pizza restaurant website showcasing menu items with clean UI/UX.
                                 Built with vanilla web technologies demonstrating fundamental frontend skills.
                             </p>
@@ -683,12 +684,12 @@
                                     class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
                                     <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                                 </a> -->
-                                <a href="https://purvpatel123.github.io/pizza/" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center"
+                                <a href="https://purvpatel123.github.io/pizza/" class="text-accent-color hover:text-accent-hover transition-colors flex items-center"
                                     target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                                 </a>
                                 <a href="https://github.com/purvpatel123/pizza"
-                                    class="text-gray-600 hover:text-gray-800 transition-colors flex items-center">
+                                    class="text-text-secondary hover:text-text-primary transition-colors flex items-center">
                                     <i class="fab fa-github mr-1"></i> Code
                                 </a>
                             </div>
@@ -698,7 +699,7 @@
 
                 <div class="text-center mt-12">
                     <a href="https://github.com/purvpatel123"
-                        class="inline-flex items-center space-x-2 bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition-colors shadow-lg">
+                        class="inline-flex items-center space-x-2 bg-secondary-bg text-text-primary px-8 py-4 rounded-full hover:bg-accent-hover transition-colors shadow-lg">
                         <i class="fab fa-github"></i>
                         <span>View All Projects on GitHub</span>
                     </a>
@@ -712,16 +713,16 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="section-fade">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
-                    Get In <span class="text-yellow-300">Touch</span>
+                    Get In <span class="text-accent-color">Touch</span>
                 </h2>
 
                 <div class="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3 class="text-2xl font-semibold mb-6">Let's Connect!</h3>
-                        <p class="text-gray-200 mb-8 leading-relaxed">
-                            I'm always interested in new opportunities, whether it's for internships,
-                            collaborative projects, or just a chat about technology. Feel free to reach out!
-                        </p>
+                        <p class="text-text-secondary mb-8 leading-relaxed">
+                                I'm always interested in new opportunities, whether it's for internships,
+                                collaborative projects, or just a chat about technology. Feel free to reach out!
+                            </p>
 
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
@@ -731,7 +732,7 @@
                                 <div>
                                     <div class="font-semibold">Email</div>
                                     <a href="mailto:patelpurv2643@gmail.com"
-                                        class="text-gray-200 hover:text-white transition-colors">
+                                        class="text-text-secondary hover:text-text-primary transition-colors">
                                         patelpurv2643@gmail.com
                                     </a>
                                 </div>
@@ -744,7 +745,7 @@
                                 <div>
                                     <div class="font-semibold">Phone</div>
                                     <a href="tel:+917487002258"
-                                        class="text-gray-200 hover:text-white transition-colors">
+                                        class="text-text-secondary hover:text-text-primary transition-colors">
                                         +91 7487002258
                                     </a>
                                 </div>
@@ -756,28 +757,28 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold">Location</div>
-                                    <div class="text-gray-200">Gandhinagar, Gujarat</div>
+                                    <div class="text-text-secondary">Gandhinagar, Gujarat</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="bg-card-bg backdrop-blur-sm rounded-xl p-8">
                         <form class="space-y-6">
                             <div>
                                 <input type="text" placeholder="Your Name"
-                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/50">
+                                    class="w-full px-4 py-3 bg-secondary-bg border border-border-color rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:border-accent-color">
                             </div>
                             <div>
                                 <input type="email" placeholder="Your Email"
-                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/50">
+                                    class="w-full px-4 py-3 bg-secondary-bg border border-border-color rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:border-accent-color">
                             </div>
                             <div>
                                 <textarea rows="4" placeholder="Your Message"
-                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/50 resize-none"></textarea>
+                                    class="w-full px-4 py-3 bg-secondary-bg border border-border-color rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:border-accent-color resize-none"></textarea>
                             </div>
                             <button type="submit"
-                                class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                class="w-full bg-text-primary text-accent-color py-3 rounded-lg font-semibold hover:bg-text-secondary transition-colors">
                                 Send Message
                             </button>
                         </form>
@@ -785,28 +786,26 @@
                 </div>
 
                 <!-- Social Links -->
-                <div class="flex justify-center space-x-6 mt-12">
-                    <a href="https://github.com/purvpatel123"
-                        class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                <a href="https://github.com/purvpatel123"
+                        class="w-12 h-12 bg-secondary-bg rounded-full flex items-center justify-center hover:bg-accent-hover transition-colors">
                         <i class="fab fa-github text-xl"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/patel-purv-7359a9289"
-                        class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                        class="w-12 h-12 bg-secondary-bg rounded-full flex items-center justify-center hover:bg-accent-hover transition-colors">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
                     <a href="mailto:patelpurv2643@gmail.com"
-                        class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                        class="w-12 h-12 bg-secondary-bg rounded-full flex items-center justify-center hover:bg-accent-hover transition-colors">
                         <i class="fas fa-envelope text-xl"></i>
                     </a>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-secondary-bg text-text-secondary py-8">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-gray-400">
+            <p class="text-text-secondary">
                 © 2025 Purv Patel. Built with passion and code. All rights reserved.
             </p>
         </div>
